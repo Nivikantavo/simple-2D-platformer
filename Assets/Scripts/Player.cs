@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForse;
-    [SerializeField] public LayerMask _groundLayer;
+    [SerializeField] private LayerMask _groundLayer;
 
     private Animator _animator;
     private Rigidbody2D _rigidbody;
